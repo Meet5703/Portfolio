@@ -1,0 +1,41 @@
+body{
+    background-color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.paragraph{
+    background-color: cadetblue;
+    color: rgb(24, 3, 44);
+
+}
+
+.paragraph__heading{
+    text-align: center;
+    background-color: aqua;
+    color: yellowgreen;
+    font-size: 30px;
+}
+
+.paragraph__1{
+    font-size: 25px;
+    background-color: aquamarine;
+    color: rgb(128, 104, 11);
+}
+
+.paragraph__2{
+    font-size: 20px;
+    font-family: serif;
+    background-color: yellow;
+    color: blue;
+}
+
+.paragraph__3{
+    font-size: 15px;
+    background-color: rgb(92, 56, 9);
+    color: violet;
+    font-style: italic;
+}
+
+.font--bold{
+    font-weight: 600;
+}

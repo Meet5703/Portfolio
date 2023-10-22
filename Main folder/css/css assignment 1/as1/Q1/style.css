@@ -1,0 +1,11 @@
+.common {
+    color: chartreuse;
+    background-color: black;
+    font-size: small;
+}
+
+.External{
+    color: rgb(225, 199, 0);
+    background-color: aqua;
+    font-size: larger;
+}

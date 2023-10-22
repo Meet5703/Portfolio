@@ -1,0 +1,60 @@
+z-index:-
+in our web page we are using too much elements photos boxes kind of stuff z-index is use for stack element priority when we apply z-index to a child element it will move in z axis and come to the front of stack 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .main__IMGS span{
+            position: absolute;
+            text-align: center;
+        }
+        .img1{
+            width: 200px;
+            height: 200px;
+            left: 600px;
+        }
+        .img2{
+            width: 200px;
+            height: 200px;
+            left: 570px;
+            top: 60px;
+        }
+        .img3{
+            width: 200px;
+            height: 200px;
+            left: 500px;
+            top: 80px;
+            z-index: 1;
+        }
+        .img4{
+            width: 200px;
+            height: 200px;
+            left: 420px;
+            top: 100px;
+        }
+        .img5{
+            width: 200px;
+            height: 200px;
+            left: 300px;
+            top: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main__IMGS">
+        <span class="img1">1 <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW421kqvoKJY8O3bQTfxBPRuSAxHlMYHRplQ&usqp=CAU" alt="img1"></span>
+        <span class="img2">2 <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8OHZRRPY5Fm9jg7TJw5ovVVHswqJOvrm6aQ&usqp=CAU" alt="img2"></span>
+        <span class="img3">3 <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMrf0TcVzhxBDowNzCLzkftyXZIZTedQ9Q_Q&usqp=CAU" alt="img3"></span>
+        <span class="img4">4 <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ56K1f5z8dnSeJRTioCmDxMrypR3vAw8LobA&usqp=CAU" alt="img4"></span>
+        <span class="img5">5 <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvxOFs7_H6R2peykf6GoZ8YGQV6vy_2H3oOg&usqp=CAU" alt="img5"></span>
+        
+        
+        
+    </div>
+</body>
+</html>

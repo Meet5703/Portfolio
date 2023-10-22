@@ -1,0 +1,258 @@
+html body{
+    background-image: url(https://t3.ftcdn.net/jpg/05/18/53/74/360_F_518537484_wddS5sP48xCiaYOvIAKrvd1ETe0vlgwl.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-size: cover;
+}
+/*q1 is from here*/
+.nav{
+    overflow: hidden;
+    background-color: rgb(128, 104, 73);
+}
+/*this is starting q3*/
+.nav a{
+    font-size: 20px;
+    padding: 20px 20px;
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    color: white;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    display: block;
+}
+.nav a:hover{
+    border-bottom: 4px double rgb(255, 229, 159);
+    border-top: 4px double rgb(255, 229, 159);
+    box-shadow: 0 0 10px 4px rgb(51, 35, 12);
+}
+/*this is ended q3*/
+
+
+.nav :hover{
+    background-color: rgb(187, 119, 119);
+    color: rgb(237, 201, 182);
+    border: 1px solid rgb(170, 39, 39);
+}
+.nav .link1{
+    background-color: rgb(163, 104, 26);
+}
+.hed_1{
+    background-image: url(https://images2.alphacoders.com/128/1289176.jpg);
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.hed_1 h1{
+    position: absolute;
+    width: 900px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.297);
+    text-align: center;
+    margin-left: 300px;
+    margin-top: 200px;
+    color: rgb(71, 7, 93);
+    text-shadow: 0 0 15px rgb(255, 7, 7);
+    border: 2px double lightgoldenrodyellow;
+    box-shadow: 0 0 8px 2px black;
+    backdrop-filter: blur(5px);
+}
+ul.req{
+    list-style-type: upper-roman;
+    font-size: 30px;
+}
+
+
+/*here is starting aboutme.html*/
+.content__img1 img{
+    width: 150px;
+    margin-top: 200px;
+    margin-left: 700px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 1px rgb(136, 134, 134);
+}
+.content__img1 h1{
+    text-align: center;
+    color: rgb(221, 145, 145);
+    width: 280px;
+    height: 50px;
+    background-color: rgba(240, 248, 255, 0.141);
+    margin-left: 42%;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    text-shadow: 0 0 4px lime;
+    box-shadow: 0 0 10px white;
+}
+.content__img1 svg{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-left: 50%;
+    background-color: rgba(240, 248, 255, 0.14);
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+}
+.content__img1{
+    background-image: url(https://img.freepik.com/free-photo/abstract-futuristic-background-with-3d-design_1361-3532.jpg?w=1380&t=st=1697443384~exp=1697443984~hmac=f4fb384257237208e8a255ba0761cb0423666ff5595f9314ef56a7b8f6eadf44);
+    width: 100%;
+    height: 600px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.content__para1{
+    font-size: 26px;
+    width: 100%;
+    height: 900px;
+    background-color: rgba(0, 0, 0, 0.344);
+    backdrop-filter: blur(10px);
+}
+.pw_para{
+    background-color: rgba(2, 2, 2, 0.285);
+    width: 100%;
+    height: 500px;
+    font-size: 27px;
+    backdrop-filter: blur(5px);
+}
+.pw_para h1{
+    text-align: center;
+    text-shadow: 0 0 10px black;
+    color: rgb(162, 201, 234);
+}
+.pw_para p{
+    text-align: justify;
+}
+.content__para1 h1{
+    text-align: center;
+    text-shadow: 0 0 20px black;
+    color: azure;
+}
+
+/*q2 blog css from here*/
+
+
+.blog{
+    background-color: rgb(153, 111, 56);
+    width: 1000px;
+    height: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    background-size: cover;
+    border-radius: 25px;
+    padding-top: 30px;
+    
+}
+.blog img{
+    margin-top: 30px;
+    border: 5px solid rgba(0, 0, 0, 0.515);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.759);
+}
+.blog h1{
+    color: burlywood;
+    text-shadow: 0 0px 4px black;
+}
+.blog :hover{
+    opacity: 0.5;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.para{
+    background-image: url(https://wallpapercave.com/wp/wp5478653.jpg);
+        width: 100%; 
+        height: 400px; 
+        background-attachment: fixed;
+        background-size: cover;
+        text-align: center;
+}
+.para h2{
+    color: rgb(91, 83, 53); 
+    width: 400px; 
+    height: 60px; 
+    background-color: rgba(255, 255, 255, 0.262);font-size: 30px;
+    backdrop-filter: blur(4px);
+    border: 1px groove rgb(65, 57, 57);
+    position: absolute;
+    margin-top: 200px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 500px;
+    text-shadow: 0 0 2px green, 0 0 3px darkgreen;
+}
+.p2{
+    background-image: url(https://wallpapers.com/images/hd/4k-minimalist-mountains-9oitratl6gd996za.jpg);
+    width: 100%; 
+    height: 800px; 
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: 100px;
+}
+.p2 p{
+    color: rgb(51, 48, 48);
+    width: 100%; 
+    height: 600px; 
+    background-color: rgba(255, 255, 255, 0.43);font-size: 17px;
+    backdrop-filter: blur(6px);
+    position: absolute;
+}
+
+/*q5 css starting here about google font blog */
+
+/*heading modification*/
+.Google__Heading{
+    width: 100%;
+    height: 400px;
+    background-image: url(https://cdn.pixabay.com/photo/2016/04/19/06/57/logo-1338108_1280.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(50, 68, 24);
+    font-size: 50px;
+    letter-spacing: 8px;
+    
+}
+.Google__Heading h1{
+    position: absolute;
+    margin-left: 500px;
+    width: 615px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.17);
+    border: 3px double rgba(0, 0, 0, 0.448);
+    box-shadow: 0 0 10px 5px gray;
+}
+
+
+/*para modification*/
+.Google__para1{
+    font-size: 25px;
+    background-repeat: repeat;
+    background-size: cover;
+    background-image: url(https://wallpapers.com/images/hd/google-background-21yp2dxfwz9735xu.jpg);
+    background-attachment: fixed;
+    color: rgb(5, 58, 104);
+    font-family: 'Montserrat', sans-serif;
+}
+.Google__para1 p{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 56, 56, 0.351);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 8px 5px rgba(155, 144, 144, 0.482);
+}
+
+
+
+
+
+
+
+
+

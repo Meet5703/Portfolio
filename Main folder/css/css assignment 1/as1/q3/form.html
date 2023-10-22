@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css form</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="form">
+        <div class="form__heading">
+            <h1>Login Page</h1>
+        </div>
+        <div class="form__content">
+        <form action="#.php">
+            <div class="form__info">
+                <label for="First name">First name</label>
+                <input type="text" id="First name" required maxlength="12" placeholder="First name" style="margin-left: -3px;">
+            </div>
+            
+            <div class="form__info">
+                <label for="Last name">Last name</label>
+                <input type="text" id="Last name" required maxlength="12" placeholder="Last name">
+            </div>
+            
+            <div class="form__email">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required placeholder="E-mail" style="margin-left: 38px;">
+            </div>
+            
+            <div class="form__Password">
+                <label for="Password">Password</label>
+                <input type="Password" id="Password" required placeholder="Password" style="margin-left: 6px;">
+            </div>
+
+            <div class="form__t&c">
+                <label for="t&c" style="font-size: 15px;">I agree all terms and conditions</label>
+                <input type="checkbox" id="t&c" required placeholder="t&c">
+            </div>
+
+            <div class="form__button" ">
+                <button style="   
+                width: 200px; 
+                height: 20px; 
+                margin-bottom: 6px;
+                border-width: 2px;
+                border-style: groove; 
+                border-color: rgb(0, 255, 238);
+                background-color: rgb(10, 71, 74);
+                font-size: 10px;
+                text-align: center;
+                color: aqua;">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

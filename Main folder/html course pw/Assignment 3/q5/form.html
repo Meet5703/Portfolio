@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="form">
+        <div class="form__heading">
+            <h1>Sign Up</h1>
+        </div>
+        <div class="form__content">
+        <form action="#.php" method="get">
+    
+    
+            <label for="First Name">First Name</label>
+            <input type="text" name="First name" id="First name" placeholder="First name " required minlength="3" maxlength="12">
+    
+            <br>
+    
+            <label for="Last Name">Last Name</label>
+            <input type="text" name="First name" id="Last name" placeholder="Last name" required minlength="4" maxlength="14">
+    
+            <br>
+    
+            <label for="Email">Email</label>
+            <input type="text" name="Email" id="Email" placeholder="Enter Your Email" required min="4" max="20">
+            
+            <br>
+    
+            <label for="password">password</label>
+            <input type="password" name="password" id="password" placeholder="password" required min="8">
+    
+            <br>
+    
+            <label for="confirm password">confirm password</label>
+            <input type="confirm password" name="confirm password" id="confirm password" placeholder="confirm password" required min="8">
+    
+            <br>
+    
+            <label for="mo.no.">Phno.</label>
+            <input type="number" name="Phno" id="Phno" placeholder="+919543****87" required max="10"
+            min="0">
+    
+            <br>
+    
+            <label for="Age">Age</label>
+            <input type="number" name="Age" id="Age" placeholder="57" required min="0" max="150">
+    
+            <br>
+    
+            <label for="DoB">DoB</label>
+            <input type="date" name="DoB" id="DoB" required>
+    
+            <br>
+    
+            <label for="Gender">Gender:
+                <label for="Male">Male</label>
+                <input type="radio" name="Gender" id="Male" value="Male">
+                <label for="Female">Female</label>
+                <input type="radio" name="Gender" id="Female" value="Female">
+                <label for="other">other</label>
+                <input type="radio" name="Gender" id="other" value="other">
+            </label>
+    
+            <br>
+    
+            <label for="T&C">T&C
+                <input type="checkbox" name="T&C" id="T&C" value="T&C" required >
+                I am Agree T&C
+            </label>
+    
+            <br>
+    
+            <button type="submit">Sign UP</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
