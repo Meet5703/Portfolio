@@ -19,6 +19,8 @@
         body {
             position: relative;
             overflow: hidden;
+            background-image: url(https://www.freecodecamp.org/news/content/images/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg);
+            background-attachment: fixed;
         }
 
         body::before {
@@ -28,10 +30,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #332464, #a52525, #340c90, #740a0a);
+            background: linear-gradient(45deg, #332464a7, #a5252598, #340c90a3, #740a0a9a);
             background-size: 400% 400%;
             animation: gradientBG 15s linear infinite;
-            z-index: -1;
+            z-index: 1;
         }
 
         @keyframes gradientBG {
@@ -54,7 +56,7 @@
             align-items: center;
             width: 100%;
             height: 8vh;
-            background-color: rgba(225, 118, 106, 0.7);
+            background-color: rgba(225, 118, 106, 0.473);
             animation: fadeIn 2s ease;
             z-index: 1;
         }
@@ -83,12 +85,12 @@
             border: none;
             padding: 5px 15px;
             border-radius: 0;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.8s, color 0.8s;
         }
 
         .nav__links button:hover {
-            background-color: rgba(194, 138, 93, 0.5);
-            color: rgb(255, 145, 0);
+            background-color: rgb(225, 176, 136);
+            color: rgb(236, 141, 93);
         }
 
         .menu-button {
@@ -110,7 +112,8 @@
 
         .content__para {
             width: 60vw;
-            color: rgb(214, 211, 206);
+            z-index: 1;
+            color: rgb(255, 255, 255);
             margin-bottom: 20%;
         }
 
@@ -119,12 +122,12 @@
             padding-left: 30%;
             font-size: 4vh;
             width: 100%;
-            animation: float 7s infinite;
+            animation: float 2s infinite;
         }
         .content__para h4{
             text-align: justify;
             padding-left: 30%;
-            animation: float 7s infinite;
+            animation: float 2s infinite;
             font-size: 3vh;
             margin-bottom: 2%;
         }
@@ -132,9 +135,17 @@
         .content__para p {
             text-align: justify;
             padding-left: 30%;
-            animation: float 7s infinite;
+            animation: float 2s infinite;
             font-size: 2.5vh;
 
+        }
+        .imgs img{
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            height: 30vh; 
+            border-radius: 100px; 
+            z-index: 1;
         }
 
         @media (max-width: 768px) {
@@ -143,6 +154,13 @@
                 height: 100vh;
                 margin: 0% 0% 0% 0%;
             }
+            .imgs img{
+                top: 20%;
+                left: 30%;
+                z-index: 1;
+                border-radius: 80px;
+                height: 15vh;
+            }
             .nav__links {
                 width: 100%;
                 flex-direction: column;
@@ -150,9 +168,6 @@
                 top: 8vh;
                 background-color: rgba(225, 118, 106, 0.7);
                 display: none;
-            }
-            .content{
-                margin: 20vh 0 0 0;
             }
 
             .content__para{
@@ -220,7 +235,12 @@
         </div>
     </div>
 
+    <div class="imgs">
+        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/212083620_339751727764647_5305591101007236560_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c4dd86&_nc_ohc=IvUXRY69-LoAX8cTrLW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AfDLAPfC7CeKSgwxCual6xMVv6SwHnWjzJV-bGL_zVC_mQ&oe=6539CBA6" alt="me">
+    </div>
+
     <div class="content">
+
         <div class="content__para">
             <h2>Hii, I am Meet Khetani</h2>
             <h4>Wel-come to my Portfolio website</h4>
