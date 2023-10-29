@@ -3,288 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@500&family=Titillium+Web&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@500&display=swap" rel="stylesheet">
-    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./assets/212083620_339751727764647_5305591101007236560_n-removebg-preview.png">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-decoration: none;
-            border-style: none;
-        }
-
-        body {
+        .bg-move {
+            height: 10vh;
+            font-weight: bold;
             position: relative;
-            overflow: hidden;
-            background-image: url(https://www.freecodecamp.org/news/content/images/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg);
-            background-attachment: fixed;
+            animation: nav-bar 4s ease-in-out;
         }
 
-        body::before {
+        @keyframes nav-bar {
+            from { height: 0vh; }
+            to { height: 10vh; }
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            display: inline-block;
+            margin: 0 1rem; /* Adjust the margin for spacing */
+            opacity: 0;
+        }
+
+        .nav-link::after {
             content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #332464a7, #a5252598, #340c90a3, #740a0a9a);
-            background-size: 400% 400%;
-            animation: gradientBG 15s linear infinite;
-            z-index: 1;
-        }
-
-        @keyframes gradientBG {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        .nav {
-            position: sticky;
-            top: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            height: 8vh;
-            background-color: rgba(225, 118, 106, 0.473);
-            animation: fadeIn 2s ease;
-            z-index: 1;
-        }
-
-        .nav__logo {
-            padding: 10px;
-        }
-
-        .nav__logo img {
-            border-radius: 40px;
-            height: 8vh;
-        }
-
-        .nav__links {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .nav__links button {
-            min-width: 100px;
-            font-family: 'Titillium Web', sans-serif;
-            font-size: 20px;
-            color: rgb(57, 46, 13);
-            font-weight: 600;
-            background-color: transparent;
-            border: none;
-            padding: 5px 15px;
-            border-radius: 0;
-            transition: background-color 0.8s, color 0.8s;
-        }
-
-        .nav__links button:hover {
-            background-color: rgb(225, 176, 136);
-            color: rgb(236, 141, 93);
-            z-index: 3;
-        }
-
-        .menu-button {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            margin: 30vh 0 0 0;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .content__para {
-            width: 60vw;
-            z-index: 1;
-            color: rgb(255, 255, 255);
-            margin-bottom: 20%;
-        }
-
-        .content__para h2 {
-            text-align: justify;
-            padding-left: 30%;
-            font-size: 4vh;
-            width: 100%;
-            animation: float 2s infinite;
-        }
-        .content__para h4{
-            text-align: justify;
-            padding-left: 30%;
-            animation: float 2s infinite;
-            font-size: 3vh;
-            margin-bottom: 2%;
-        }
-
-        .content__para p {
-            text-align: justify;
-            padding-left: 30%;
-            animation: float 2s infinite;
-            font-size: 2.5vh;
-
-        }
-        .imgs img{
             position: absolute;
-            top: 30%;
-            left: 20%;
-            height: 25vh; 
-            border-radius: 100px; 
-            z-index: 1;
-            border: 10px double transparent;
-            animation: float 2s infinite, border-pulse 5s ease-in-out infinite;
-            box-shadow: 10px 10px 10px 2px rgb(0, 0, 0);
+            left: 0;
+            bottom: 0;
+            width: 0;
+            border-bottom: 4px solid rgb(0, 253, 253); /* Change the color as needed */
+            transition: width 0.3s ease-in-out;
         }
 
-        @media (max-width: 768px) {
-            body{
-                width: 100vw;
-                height: 100vh;
-                margin: 0% 0% 0% 0%;
-            }
-            .imgs img{
-                margin-top: 0%;
-                left: 30%;
-                z-index: 1;
-                border-radius: 80px;
-                height: 15vh;
-            }
-            .nav__links {
-                z-index: 3;
-                width: 100%;
-                flex-direction: column;
-                position: absolute;
-                top: 8vh;
-                background-color: rgba(225, 118, 106, 0.7);
-                display: none;
-            }
-
-            .content__para{
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                margin-top: 20%;
-                margin-right: 15%;
-                margin-left: -10%;
-            }
-            .content__para p{
-                font-size: 17px;
-            }
-            .content__para h2{
-                font-size: 30px;
-                margin-bottom: 3vh;
-            }
-            .content__para h4{
-                font-size: 23px;
-;
-            }
-
-            .menu-button {
-                display: block;
-            }
+        .nav-link:hover::after {
+            width: 100%;
+            animation: link-hover 0.3s ease-in-out;
         }
 
-        @media (min-width: 769px) {
-            .nav__links {
-                display: flex;
-            }
-            .menu-button {
-                display: none;
-            }
+        .font-shadow:hover {
+            text-shadow: 0 0 6px rgb(4, 58, 255);
+            animation: text-shadow-hover 0.3s ease-in-out;
         }
+
+        /* Staggered animation for links */
+        .nav-link:nth-child(1) { animation: fadeIn 0.5s ease 1s forwards, bounce 1s 1; }
+        .nav-link:nth-child(2) { animation: fadeIn 0.5s ease 1.2s forwards, bounce 1s 2; }
+        .nav-link:nth-child(3) { animation: fadeIn 0.5s ease 1.4s forwards, bounce 1s 3; }
+        .nav-link:nth-child(4) { animation: fadeIn 0.5s ease 1.6s forwards, bounce 1s 4; }
+        .nav-link:nth-child(5) { animation: fadeIn 0.5s ease 1.8s forwards, bounce 1s 5; }
 
         @keyframes fadeIn {
-            0% {
-                opacity: 0;
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
             }
-            100% {
-                opacity: 1;
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
             }
         }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translate(0, 0);
+        .imginit {
+            animation: img-appear 3s;
+        }
+
+        @keyframes img-appear {
+            0% { opacity: 0; transform: translateX(80px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+
+
+
+
+        .wrapper{
+        display: flex;
+        
+        }
+        .wrapper .static-txt{
+        color: #fff;
+        font-size: 60px;
+        font-weight: 400;
+        }
+        .wrapper .dynamic-txts{
+        margin-left: 15px;
+        height: 90px;
+        line-height: 90px;
+        overflow: hidden;
+        }
+        .dynamic-txts li{
+        list-style: none;
+        color: #FC6D6D;
+        font-size: 60px;
+        font-weight: 500;
+        position: relative;
+        top: 0;
+        animation: slide 12s steps(4) infinite;
+        }
+        @keyframes slide {
+        100%{
+            top: -360px;
+        }
+        }
+        .dynamic-txts li span{
+        position: relative;
+        margin: 5px 0;
+        line-height: 90px;
+        }
+        .dynamic-txts li span::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #343F4F;
+        border-left: 2px solid #FC6D6D;
+        animation: typing 3s steps(10) infinite;
+        }
+        @keyframes typing {
+        40%, 60%{
+            left: calc(100% + 30px);
+        }
+        100%{
+            left: 0;
+        }
+        }
+
+
+
+
+
+
+
+
+
+        .imginit-animate {
+            animation: img-appear 4s;
+        }
+
+        .vertical-bounce {
+            animation: bounce 6s;
+        }
+
+        @keyframes img-appear {
+            0% { opacity: 0; transform: translateX(80px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
             }
-            50% {
-                transform: translate(0, -5px);
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
             }
         }
 
-        @keyframes border-pulse {
-         0% {
-            border-color: rgb(4, 0, 255);
-         }
-         25% {
-            border-color: rgb(255, 0, 0);
-         }
-         50% {
-            border-color: rgb(26, 255, 0);
-         }
-         75% {
-            border-color: rgb(166, 0, 255);
-         }
-         100% {
-            border-color: rgb(203, 248, 5);
-         }
-      }
+
+
+
+
+
+
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .icon-link {
+            font-size: 24px;
+            margin-right: 20px;
+        }
+
+
+
+
+
+
+        @media (max-width: 640px) {
+
+            .wrapper{
+                margin-top: 20%;
+                font-size: 15px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            body {
+                width: 100%; 
+            }
+            .mypic {
+                margin-left: 10%; 
+                width: 100%; 
+            }
+            .wrapper .static-txt {
+                font-size: 30px;
+            }
+            .dynamic-txts li {
+                font-size: 40px;
+            }
+            .bg-move {
+                height: 5vh; 
+            }
+            .nav-link {
+                margin: 0 0.5rem; 
+            }
+        }
+
     </style>
+    <title>Meet Khetani</title>
 </head>
-<body>
-    <div class="nav">
-        <div class="nav__logo">
-            <img src="https://scontent.cdninstagram.com/v/t51.29350-15/291982127_331535902375060_6494855087633714235_n.webp?stp=dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=c4dd86&_nc_ohc=clNFHXj14QgAX8mCCjU&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AfA-AMxZlxhx2ShQ85aFohB0vMSBINxAQtNlT2HN-f3zOg&oe=65395199" alt="me">
+<body style="background-image: url(https://wallpapers.com/images/hd/dark-mountain-4k-3vxidfa2y5t5uk4m.jpg);
+                background-attachment: fixed;" class="bg-cover">
+    <div class="bg-white bg-opacity-25 w-screen h-screen">
+        <div>
+            <nav>
+                <div class=" md:text-xl bg-move w-full flex justify-center items-center bg-gradient-to-br from-teal-500 via-sky-200 to-indigo-400 p-5">
+                    <ul class="flex flex-wrap justify-center items-center mt-4 rounded-lg">
+                        <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">Home</a></li>
+                        <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">About me</a></li>
+                        <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">Portfolio</a></li>
+                        <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">Skills</a></li>
+                        <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <div class="menu-button" onclick="toggleNav()">&#9776;</div>
-        <div class="nav__links">
-            <button><a href="#">Home</a></button>
-            <button><a href="#">Skills</a></button>
-            <button><a href="#">My Work</a></button>
-            <button><a href="#">About Me</a></button>
+        <div class="sm:flex items-center">
+            <div>
+                <img class="mypic md:ml-12 bounce imginit row-span-1 animate-img" src="./assets/212083620_339751727764647_5305591101007236560_n-removebg-preview.png" alt="1">
+            </div>
+            <div class="wrapper">
+                <div class="static-txt">I'm</div>
+                    <ul class="dynamic-txts">
+                    <li><span>Meet Khetani</span></li>
+                    <li><span>a web-dev</span></li>
+                    <li><span>a student</span></li>
+                    <li><span>learning at pw-skills</span></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="imgs">
-        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/212083620_339751727764647_5305591101007236560_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c4dd86&_nc_ohc=IvUXRY69-LoAX8cTrLW&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AfDLAPfC7CeKSgwxCual6xMVv6SwHnWjzJV-bGL_zVC_mQ&oe=6539CBA6" alt="me">
-    </div>
-
-    <div class="content">
-
-        <div class="content__para">
-            <h2>Hii, I am Meet Khetani</h2>
-            <h4>Wel-come to my Portfolio website</h4>
-            <h4>I am learning from pw skills.</h4>
-            <p>
-                I have a Front-end developer skill set which I have given in the Skills tab. If you want to see my work and know about my story, you can also check the About Me and My Work tabs. If you like my website and my work, please don't forget to rate it below the page.
-            </p>
-        </div>
-    </div>
-
     <script>
-        function toggleNav() {
-            var links = document.querySelector(".nav__links");
-            if (window.getComputedStyle(links).display === "flex" || window.getComputedStyle(links).display === "block") {
-                links.style.display = "none";
-            } else {
-                links.style.display = "flex";
-            }
-        }
+        window.addEventListener('load', function () {
+            const img = document.querySelector('.imginit');
+            img.classList.add('imginit-animate');
+            setTimeout(() => {
+                img.classList.add('vertical-bounce');
+            }, 100);
+        });
     </script>
 </body>
-</html>  
+</html>
