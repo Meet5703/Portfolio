@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="output.css">
+    <title>Portfolio</title>
+    <style>
+        #check:checked ~ .nav-list {
+            display: block;
+        }
+        
+        #check:checked + label #menu-icon {
+            display: none;
+        }
+        
+        #check:checked + label #close-icon {
+            display: block;
+        }
+
+        .custom-animation {
+            width: 0ch;
+            animation: text 8s steps(60) infinite;
+        }
+        @keyframes text {
+            0% {
+                width: 0ch;
+            }
+            50% {
+                width: 14ch;
+            }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <div id="home" class="h-screen" style="background-image: url(./assets/Animated\ Shape.svg); background-size: cover; background-attachment: fixed;">
+        <nav class="bg-purple-300 w-full h-16 px-6 flex items-center justify-between md:px-8  z-10">
+            <div>
+                <img src="./assets/photo.jpg" alt="" class="rounded-full">
+            </div>
+            <div class="flex md:flex-row-reverse space-x-4 items-center md:w-3/4 md:justify-between">
+                <div class="transition-transform hover:scale-110">
+                    <button class="px-[4px] py-[7px] bg-gradient-to-br overflow-hidden from-purple-600 to-indigo-500 hover:text-white rounded-lg w-24">
+                        <span class="bg-purple-300 px-6 py-1 rounded hover-bg-transparent">Login</span>
+                    </button>
+                </div>
+                <div>
+                    <input type="checkbox" id="check" class="hidden">
+                    <label for="check" class="cursor-pointer md:hidden">
+                        <!-- Add Tailwind CSS classes to style icons -->
+                        <i id="menu-icon" class="fa fa-navicon text-xl"></i>
+                        <i id="close-icon" class="fa fa-times hidden text-xl"></i>
+                    </label>
+                    <ul class="bg-purple-200 py-4 md:bg-transparent top-14 z-0 duration-300 nav-list w-screen absolute left-0 top-20 flex justify-center hidden md:block md:flex md:w-full md:pl-40 md:relative md:top-0 text-center space-y-6 md:space-y-0 md:space-x-9">
+                        <li class="transition-transform hover:scale-110">
+                            <a href="#home">Home</a>
+                        </li>
+                        <li class="transition-transform hover:scale-110">
+                            <a href="#aboutme">About</a>
+                        </li>
+                        <li class="transition-transform hover:scale-110">
+                            <a href="#skills">Skills</a>
+                        </li>
+                        <li class="transition-transform hover:scale-110">
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="transition-transform hover:scale-110">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div>
+            <div class="md:w-1/2 h-1/2 inline-block float-right inline-flex justify-center mt-16 ">
+                <img class="w-1/2 md:w-1/2  rounded-full" src="./assets/profile logo.png" alt="">
+            </div>
+            <div class="md:w-1/2 inline-block ml-12 mt-64 md:mt-48 absolute">
+                <p class="mt-10">
+                    <div class="text-4xl flex justify-center w-full relative">
+                        <div>
+                            <h4 class="md:absolute left-60 -top-1">Hii I am</h4>
+                            <span class="absolute custom-animation whitespace-nowrap overflow-hidden font-mono text-purple-600 uppercase text-4xl ">Meet Khetani</span>
+                            <p class="md:absolute md:top-5 md:left-60 text-lg mt-10 md:text-xl">I am a Web-Developer</p>
+                        </div>
+                    </div>
+                </p>
+            </div>
+            <div>
+                <ul class="text-3xl absolute flex space-x-4 text-center mt-96 w-full justify-evenly h-1/2 items-center mx-auto md:flex-col md:space-x-0 md:mt-72 md:ml-0 md:w-10">
+                    <li class="hover:scale-125 duration-700"><a href="https://www.instagram.com/mr.meet_khetani/"><i class="fa fa-instagram"></i></a></li>
+                    <li class="hover:scale-125 duration-700"><a href="https://github.com/Meet5703"><i class="fa fa-github"></i></a></li>
+                    <li class="hover:scale-125 duration-700"><a href="https://www.linkedin.com/in/meet-khetani-a1608a297/"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="hover:scale-125 duration-700"><a href="#"><i class="fa fa-google"></i></a></li>
+                    <li class="hover:scale-125 duration-700"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="aboutme" class="w-screen bg-purple-900 text-white ml-0 flex justify-center">
+        <div class="w-full max-w-screen-xl md:flex md:flex-row my-8 p-4">
+            <div class="hidden md:w-1/2 md:block">
+                <img src="./assets/about.png" alt="About Me Image" class="w-3/5 rounded-lg">
+            </div>
+    
+            <div class="w-full md:w-1/2 p-4">
+                <h1 class="text-2xl md:text-4xl mb-6 tracking-widest uppercase">About Me</h1>
+                <p class="text-justify">
+                    Hi there! I'm Meet Khetani, and I'm on an exciting journey as a web developer. My passion for coding started back in 7th grade, and despite initially pursuing a diploma in civil engineering, my heart has always been set on becoming a software engineer. Today, I'm committed to my dream of mastering web development.
+    
+                    With a diverse educational background in civil engineering, I bring a unique perspective to the world of web development. This blend of engineering principles and creative coding skills allows me to approach projects from a distinctive angle.
+    
+                    In this portfolio, you'll find a showcase of my dedication and continuous growth. These assignments and projects are more than just academic tasks; they represent milestones in my pursuit of excellence in web development.
+    
+                    I'm constantly evolving and refining my skills, and I'm eager to explore new opportunities and collaborations. Stay tuned for a dedicated contact section, making it easy for us to connect and create outstanding digital experiences together.
+    
+                    Thank you for visiting, and I look forward to our journey in the world of web development!
+                </p>
+                <div class="my-6 bg-purple-900">
+                    <h2 class="text-2xl mb-4">Education</h2>
+                    <div class="mb-2">
+                        <h3 class="font-semibold">Diploma in Civil Engineering</h3>
+                        <p>GTU University, Graduated: 2022</p>
+                    </div>
+                    <div class="mb-2">
+                        <h3 class="font-semibold">Web Development Courses</h3>
+                        <p>PW-Skills, Ongoing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="skills" class="w-screen bg-purple-200 text-black py-10">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <h1 class="text-2xl md:text-4xl mb-6 text-center tracking-widest uppercase text-purple-600">Skills</h1>
+
+            <div class="flex flex-wrap mb-6">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-lg md:text-2xl mb-2 text-center md:text-left">Front-End Development</h2>
+                    <div class="mb-2">
+                        <div class="text-center md:text-left">
+                            HTML and HTML5
+                        </div>
+                        <div class="bg-purple-300 h-6 rounded-full">
+                            <div class="bg-purple-600 h-6 w-full rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="text-center md:text-left">
+                            CSS and CSS3
+                        </div>
+                        <div class="bg-purple-300 h-6 rounded-full">
+                            <div class="bg-purple-600 h-6 w-full rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="text-center md:text-left">
+                            JavaScript
+                        </div>
+                        <div class="bg-purple-300 h-6 rounded-full">
+                            <div class="bg-purple-600 h-6 w-0 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 md:-mt-1 md:space-x-6 mt-5">
+                    <h2 class="text-lg md:text-2xl mb-2 text-center md:text-left md:space-x-6">Back-End Development</h2>
+                    <div class="mb-2">
+                        <div class="text-center md:text-left">
+                            Node.js
+                        </div>
+                        <div class="bg-purple-300 h-6 rounded-full">
+                            <div class="bg-purple-600 h-6 w-0 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="text-center md:text-left">
+                            Express
+                        </div>
+                        <div class="bg-purple-300 h-6 rounded-full">
+                            <div class="bg-purple-600 h-6 w-0 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="text-center md:text-left">
+                            SQL and Databases
+                        </div>
+                        <div class="bg-purple-300 h-6 rounded-full">
+                            <div class="bg-purple-600 h-6 w-0 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="text-center md:text-left">
+                            RESTful API Design
+                        </div>
+                        <div class="bg-purple-300 h-6 rounded-full">
+                            <div class="bg-purple-600 h-6 w-0 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-lg md:text-2xl mb-2 text-center md:text-left">Extra Skills</h2>
+                    <div class="mb-2">
+                        <div class="text-center md:text-left">
+                            Responsive Web Design
+                        </div>
+                        <div class="bg-purple-300 h-6 rounded-full">
+                            <div class="bg-purple-600 h-6 w-1/2 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="text-center md:text-left">
+                            Git and GitHub
+                        </div>
+                        <div class="bg-purple-300 h-6 rounded-full">
+                            <div class="bg-purple-600 h-6 w-full rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="text-center md:text-left">
+                            Problem Solving
+                        </div>
+                        <div class="bg-purple-300 h-6 rounded-full">
+                            <div class="bg-purple-600 h-6 w-full rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio" class="w-screen bg-purple-900 text-white py-10">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl text-center text-white uppercase mb-6 tracking-wider">Portfolio</h1>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-purple-800 rounded-lg overflow-hidden shadow-lg">
+                    <img src="./assets/portfolio items/i1.png" alt="Project 1" class="w-full h-auto transition-transform transform hover:scale-105">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mt-2">Railway IRCTC Clone</h2>
+                        < class="text-sm mt-2">I created this clone as an assignment for my course. It's a replica of the Indian Railway Catering and Tourism Corporation (IRCTC) website, showcasing my web development skills.</                p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="bg-purple-800 rounded-lg overflow-hidden shadow-lg">
+                    <img src="./assets/portfolio items/item2.png" alt="Project 2" class="w-full h-auto transition-transform transform hover:scale-105">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mt-2">Dashboard Sidebar Design</h2>
+                        <p class="text-sm mt-2">I designed this dashboard sidebar with custom colors, icons, and layout. While the layout was provided by my faculty, the creative design was entirely my own.</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="bg-purple-800 rounded-lg overflow-hidden shadow-lg">
+                    <img src="./assets/portfolio items/item3.png" alt="Project 3" class="w-full h-auto transition-transform transform hover:scale-105">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mt-2">Tailwind CSS Form Assignment</h2>
+                        <p class="text-sm mt-2">I had to create a responsive form using Tailwind CSS based on a provided design. This is the PC view, and the tablet view is shown below.</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="bg-purple-800 rounded-lg overflow-hidden shadow-lg">
+                    <img src="./assets/portfolio items/item4.png" alt="Project 4" class="w-full h-auto transition-transform transform hover:scale-105">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mt-2">Finance Facility Clone</h2>
+                        <p class="text-sm mt-2">This was my first project to test my skills. I recreated it using Tailwind CSS, and this is the result I achieved.</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="bg-purple-800 rounded-lg overflow-hidden shadow-lg">
+                    <img src="./assets/portfolio items/item5.png" alt="Project 5" class="w-full h-auto transition-transform transform hover:scale-105">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mt-2">Price Card Design Assignment</h2>
+                        <p class="text-sm mt-2">For this assignment, the card format and details were fixed, and I was tasked with creating its design. This is the result I achieved.</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="bg-purple-800 rounded-lg overflow-hidden shadow-lg">
+                    <img src="./assets/portfolio items/item6.png" alt="Project 6" class="w-full h-auto transition-transform transform hover:scale-105">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mt-2">Form Clone Tablet View</h2>
+                        <p class="text-sm mt-2">This is the tablet view of a form clone that I designed. It showcases my responsive design skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="w-full bg-purple-300 text-black py-8">
+        <div class="max-w-screen-xl mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-4xl mb-6 tracking-widest uppercase">Contact Me</h2>
+            <p class="text-sm md:text-base mb-6">
+                Thank You so much for visit my page If You like my work and portfolio and if you want to make somthing for you please contact me 
+            </p>
+            <!-- Social Media Links -->
+            <ul class="text-3xl flex space-x-4 text-center justify-center items-center">
+                <li class="hover:scale-125 duration-700">
+                    <a href="https://www.instagram.com/mr.meet_khetani/">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="hover:scale-125 duration-700">
+                    <a href="https://github.com/Meet5703">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+                <li class="hover:scale-125 duration-700">
+                    <a href="https://www.linkedin.com/in/meet-khetani-a1608a297/">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="hover:scale-125 duration-700">
+                    <a href="#">
+                        <i class="fa fa-google"></i>
+                    </a>
+                </li>
+                <li class="hover:scale-125 duration-700">
+                    <a href="#">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- Email Contact -->
+            <div class="text-xl mt-6">
+                <a class="text-black hover:text-purple-600" href="mailto:meetkhetani1111@gmail.com">
+                    <i class="fa fa-envelope"></i> meetkhetani1111@gmail.com
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
