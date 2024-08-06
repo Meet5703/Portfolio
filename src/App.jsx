@@ -1,20 +1,10 @@
-// src/App.jsx
 import React, { useEffect } from "react";
-import {
-  Box,
-  VStack,
-  Heading,
-  Text,
-  Container,
-  SimpleGrid,
-} from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { Box } from "@chakra-ui/react";
 import { gsap } from "gsap";
 import ScrollContainer from "./components/layout/ScrollContainer";
-import ContactForm from "./components/ContactForm";
+import CursorDot from "./components/layout/CursorDot";
 import NavBar from "./components/layout/NavBar";
-
-const MotionBox = motion(Box);
+import Home from "./components/Home/Home";
 
 const App = () => {
   useEffect(() => {
@@ -25,6 +15,8 @@ const App = () => {
     <ScrollContainer>
       <Box>
         <NavBar />
+        <CursorDot />
+        <Home />
       </Box>
     </ScrollContainer>
   );

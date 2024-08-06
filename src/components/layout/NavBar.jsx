@@ -1,16 +1,14 @@
-import {
-  Container,
-  HStack,
-  Image,
-  Link,
-  Text,
-  VStack,
-  Box,
-} from "@chakra-ui/react";
-import React from "react";
+import { Container, HStack, Image, Link, Text, Box } from "@chakra-ui/react";
+import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 
 const NavBar = () => {
+  const [activeLink, setActiveLink] = useState("home");
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
   return (
     <Box
       as="nav"
@@ -40,61 +38,30 @@ const NavBar = () => {
           </HStack>
           <HStack
             as="ul"
-            spacing={8}
+            spacing={2}
             fontWeight="500"
             textTransform="uppercase"
             listStyleType="none"
           >
-            <Box as="li">
-              <Link
-                _hover={{ color: "purple.600", transform: "scale(1.1)" }}
-                href="#home"
-                smooth={true}
-                duration={500}
+            {["Home", "About", "Skills", "Projects", "Contact"].map((link) => (
+              <Box
+                as="li"
+                key={link}
+                className={`nav-link ${
+                  activeLink === link.toLowerCase() ? "active" : ""
+                }`}
+                _hover={{ color: "#f3eef8" }}
+                onClick={() => handleLinkClick(link.toLowerCase())}
               >
-                Home
-              </Link>
-            </Box>
-            <Box as="li">
-              <Link
-                _hover={{ color: "purple.600", transform: "scale(1.1)" }}
-                href="#about"
-                smooth={true}
-                duration={500}
-              >
-                About
-              </Link>
-            </Box>
-            <Box as="li">
-              <Link
-                _hover={{ color: "purple.600", transform: "scale(1.1)" }}
-                href="#skills"
-                smooth={true}
-                duration={500}
-              >
-                Skills
-              </Link>
-            </Box>
-            <Box as="li">
-              <Link
-                _hover={{ color: "purple.600", transform: "scale(1.1)" }}
-                href="#projects"
-                smooth={true}
-                duration={500}
-              >
-                Projects
-              </Link>
-            </Box>
-            <Box as="li">
-              <Link
-                _hover={{ color: "purple.600", transform: "scale(1.1)" }}
-                href="#contact"
-                smooth={true}
-                duration={500}
-              >
-                Contact
-              </Link>
-            </Box>
+                <Link
+                  className="animateLink"
+                  _hover={{ transform: "scale(1.1)" }}
+                  href={`#${link.toLowerCase()}`}
+                >
+                  {link}
+                </Link>
+              </Box>
+            ))}
           </HStack>
         </HStack>
       </Container>
